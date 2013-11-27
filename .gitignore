@@ -71,4 +71,5 @@ Desktop.ini
 # Miscellaneous
 .mailmap
 *.png
+!/images/*png
 *.webloc
