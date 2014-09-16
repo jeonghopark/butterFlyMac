@@ -24,7 +24,6 @@ void ofApp::draw(){
     
 }
 
-
 void ofApp::butterFlySetUp(){
     for (int i=0; i<NUM_X; i++) {
         for (int j=0; j<NUM_Y; j++) {
