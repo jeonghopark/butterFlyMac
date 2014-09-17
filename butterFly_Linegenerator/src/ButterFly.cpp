@@ -34,7 +34,7 @@ void ButterFly::drawing(float _size){
 
 #ifdef _WIN32
 	//ofBeginShape();
-#elif
+#elif __APPLE__
 	ofBeginShape();
 #endif
 
@@ -51,7 +51,7 @@ void ButterFly::drawing(float _size){
 
 #ifdef _WIN32
 	//ofEndShape();
-#elif
+#elif __APPLE__
 	ofEndShape();
 #endif
 
