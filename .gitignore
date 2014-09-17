@@ -1,75 +1,13 @@
-# ignore bin folders' contents, except data folder therein
-/bin/*
-!/bin/data/
+#Ignore everything
+*
 
-# Some general ignore patterns
-build/
-obj/
-*.o
-Debug*/
-Release*/
-*.mode*
-*.app/
-*.pyc
-.svn/
-addons.make
-Makefile
-config.make
+#Whitelist subdirectories
+!/bin/data
+!/src
 
-#XCode
-*.plist
-*.xcconfig
-*.xcodeproj
-*.pbxuser
-*.perspective
-*.perspectivev3
-*.mode1v3
-*.mode2v3
-#XCode 4
-xcuserdata
-*.xcworkspace
+#Whitelist the gitignore itself
+!.gitignore
 
-#Code::Blocks
-*.depend
-*.layout
-
-#Visual Studio
-*.sdf
-*.opensdf
-*.suo
-ipch/
-
-#Eclipse
-.metadata
-local.properties
-.externalToolBuilders
-
-# OS-specific ignore patterns
-
-#Linux
-*~
-# KDE
-.directory
-
-#OSX
-.DS_Store
-*.swp
-*~.nib
-# Thumbnails
-._*
-
-#Windows
-# Windows image file caches
-Thumbs.db
-# Folder config file
-Desktop.ini
-
-#Android
-.csettings
-/libs/openFrameworksCompiled/project/android/paths.make
-
-# Miscellaneous
-.mailmap
-*.png
-!/images/*png
-*.webloc
+#Whitelist .cpp and .h files
+!*.h
+!*.cpp
