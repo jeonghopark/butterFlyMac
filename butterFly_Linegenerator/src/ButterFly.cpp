@@ -23,6 +23,7 @@ ButterFly::ButterFly(){
 
 }
 
+
 void ButterFly::drawing(float _size){
 
 	//    mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
