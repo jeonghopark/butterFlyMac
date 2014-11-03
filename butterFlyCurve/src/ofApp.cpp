@@ -1,3 +1,7 @@
+// https://www.google.com/search?q=butterfly+curve&newwindow=1&client=safari&rls=en&biw=1474&bih=1016&tbm=isch&tbo=u&source=univ&sa=X&ei=eGAqVPPzEYfXavGkgWA&ved=0CDUQsAQ
+
+
+
 #include "ofApp.h"
 
 //--------------------------------------------------------------

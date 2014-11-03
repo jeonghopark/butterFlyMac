@@ -1,3 +1,5 @@
+// https://www.google.com/search?q=butterfly+curve&newwindow=1&client=safari&rls=en&biw=1474&bih=1016&tbm=isch&tbo=u&source=univ&sa=X&ei=eGAqVPPzEYfXavGkgWA&ved=0CDUQsAQ
+
 #include "ofApp.h"
 
 //--------------------------------------------------------------
@@ -24,6 +26,7 @@ void ofApp::draw(){
     
 }
 
+//--------------------------------------------------------------
 void ofApp::butterFlySetUp(){
     for (int i=0; i<NUM_X; i++) {
         for (int j=0; j<NUM_Y; j++) {
@@ -33,6 +36,7 @@ void ofApp::butterFlySetUp(){
     }
 }
 
+//--------------------------------------------------------------
 void ofApp::butterFlyDraw(){
     for (int i=0; i<NUM_X; i++) {
         for (int j=0; j<NUM_Y; j++) {
@@ -52,7 +56,12 @@ void ofApp::butterFlyDraw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
-    butterFlySetUp();
+    if (key == 'f' ){
+        fullscreen = !fullscreen;
+        ofSetFullscreen(fullscreen);
+    } else {
+        butterFlySetUp();
+    }
 
 }
 
