@@ -1,13 +1,23 @@
-#Ignore everything
-*
+.svn
+.hg
+.cvs
 
-#Whitelist subdirectories
-!/bin/data
-!/src
+# osx
+*.app
+*.mode1v3
+*.pbxuser
+.DS_Store
+build/
+xcuserdata/
+DerivedData/
+project.xcworkspace
 
-#Whitelist the gitignore itself
-!.gitignore
+# vs2010
+ipch/
+obj/
+*.sdf
 
-#Whitelist .cpp and .h files
-!*.h
-!*.cpp
+
+### Old Folder
+images/
+captureImages/
