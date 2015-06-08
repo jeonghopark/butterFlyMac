@@ -1,7 +1,3 @@
-.svn
-.hg
-.cvs
-
 # osx
 *.app
 *.mode1v3
@@ -11,13 +7,3 @@ build/
 xcuserdata/
 DerivedData/
 project.xcworkspace
-
-# vs2010
-ipch/
-obj/
-*.sdf
-
-
-### Old Folder
-images/
-captureImages/
