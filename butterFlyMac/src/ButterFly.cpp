@@ -10,18 +10,25 @@
 
 ButterFly::ButterFly(){
 
-	randomA_1 = ofRandom( -0.5, 0.5 );
-	randomA_2 = ofRandom( -0.5, 0.5 );
-	randomB = ofRandom( 0.8, 1.5 );
-	randomC = ofRandom( 0.8, 1.5 );
-	randomD = ofRandom( 0.5, 42.5 );
-
-	colorrandomA = ofRandom( 120, 255 );
-	colorrandomB = ofRandom( 0.1, 2 );
-
-	Number = 1000;
 
 }
+
+
+void ButterFly::setup(){
+    
+    randomA_1 = ofRandom( -0.5, 0.5 );
+    randomA_2 = ofRandom( -0.5, 0.5 );
+    randomB = ofRandom( 0.8, 1.5 );
+    randomC = ofRandom( 0.8, 1.5 );
+    randomD = ofRandom( 0.5, 42.5 );
+    
+    colorrandomA = ofRandom( 120, 255 );
+    colorrandomB = ofRandom( 0.1, 2 );
+    
+    Number = 1000;
+    
+}
+
 
 
 void ButterFly::drawing(float _size){

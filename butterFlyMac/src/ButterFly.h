@@ -16,6 +16,7 @@ class ButterFly {
 public:
     ButterFly();
     
+    void setup();
     void drawing(float _size);
     
     float butterFlyCurveX(double t);

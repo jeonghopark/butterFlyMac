@@ -1,5 +1,6 @@
 // https://www.google.com/search?q=butterfly+curve&newwindow=1&client=safari&rls=en&biw=1474&bih=1016&tbm=isch&tbo=u&source=univ&sa=X&ei=eGAqVPPzEYfXavGkgWA&ved=0CDUQsAQ
 
+
 #include "ofApp.h"
 
 //--------------------------------------------------------------
@@ -8,48 +9,64 @@ void ofApp::setup(){
 	ofBackground(ofColor::fromHsb(30, 10, 255, 255));
 	ofEnableAlphaBlending();
 
+    
+    
+    numX = ofGetWidth() * 0.02;
+    numY = ofGetHeight() * 0.02;
+    
+    butterFlySize = 10;
+    
 	butterFlySetUp();
 
+    
 }
+
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
 }
 
+
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	ofPushMatrix();
-	ofTranslate(200 / 2, 170 / 2);
 	butterFlyDraw();
-	ofPopMatrix();
 
 }
 
+
 //--------------------------------------------------------------
 void ofApp::butterFlySetUp(){
-	for (int i = 0; i < NUM_X; i++) {
-		for (int j = 0; j < NUM_Y; j++) {
-			int index = i + j*NUM_X;
-			butterFly[index] = ButterFly();
+    
+    butterFlies.resize( numX * numY );
+    
+	for (int i=0; i<numX; i++) {
+		for (int j=0; j<numY; j++) {
+			int _index = i + j * numY;
+            ButterFly _butterFlyE;
+            _butterFlyE.setup();
+			butterFlies[_index] = _butterFlyE;
 		}
 	}
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::butterFlyDraw(){
-	for (int i = 0; i < NUM_X; i++) {
-		for (int j = 0; j < NUM_Y; j++) {
+    
+    for (int i=0; i<numX; i++) {
+        for (int j=0; j<numY; j++) {
 
-			int index = i + j*NUM_X;
+			int _index = i + j * numY;
 
 			ofPushMatrix();
 			ofTranslate(i * 100, j * 100);
 
-			butterFly[index].drawing(10);
+			butterFlies[_index].drawing(butterFlySize);
 
 			ofPopMatrix();
+            
 		}
 	}
 }
@@ -57,17 +74,12 @@ void ofApp::butterFlyDraw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
-<<<<<<< HEAD
     if (key == 'f' ){
         fullscreen = !fullscreen;
         ofSetFullscreen(fullscreen);
     } else {
         butterFlySetUp();
     }
-=======
-	butterFlySetUp();
->>>>>>> dc6bfd5098444bef30cb8a818770c56f8e7406fa
-
 }
 
 //--------------------------------------------------------------
@@ -89,8 +101,6 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
 
-	butterFlySetUp();
-
 }
 
 //--------------------------------------------------------------
@@ -100,6 +110,13 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
+
+    numX = ofGetWidth() * 0.02;
+    numY = ofGetHeight() * 0.02;
+    
+    butterFlySize = 10;
+    
+    butterFlySetUp();
 
 }
 
